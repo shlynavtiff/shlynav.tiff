@@ -8,6 +8,7 @@ import Cursor from './components/Cursor'
 import NavBar from './components/Navbar'
 import Footer from './components/Footer'
 import { AnimatePresence } from 'framer-motion'
+import { Analytics } from "@vercel/analytics/react"
 
 function AnimatedRoutes() {
   const location = useLocation(); // ✅ Now inside Router context
@@ -36,6 +37,7 @@ function App() {
             <AnimatedRoutes /> {/* Routes component now inside Router */}
           </div>
           <Footer /> {/* Footer always sits at the bottom */}
+          <Analytics/>
         </div>
         
       </CursorProvider>
