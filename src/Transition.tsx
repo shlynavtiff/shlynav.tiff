@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import './index.css'
 const Transition = (OgComponent: React.FC) => {
-    return (props: any) => {
+    return () => {
         return (
             <>
                 {/* <motion.div
