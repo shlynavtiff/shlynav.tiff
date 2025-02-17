@@ -27,12 +27,12 @@ const Home: React.FC = () => {
 
         {/* First Row */}
         <div className="flex flex-col xl:flex-row justify-between w-full gap-4">
-          <div className="bg-[#928DAB] text-[#1F1C2C] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
+          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
             <span className="text-xs">null. (null)</span>
           </div>
-          <div className="bg-[#928DAB] text-[#1F1C2C] w-full xl:w-[930px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
+          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[930px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
             <span className="text-xs">null. (null)</span>
@@ -41,12 +41,12 @@ const Home: React.FC = () => {
 
         {/* Second Row */}
         <div className="flex flex-col xl:flex-row justify-between w-full gap-4">
-          <div className="bg-[#928DAB] text-[#1F1C2C] w-full xl:w-[930px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
+          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[930px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
             <span className="text-xs">null. (null)</span>
           </div>
-          <div className="bg-[#928DAB] text-[#1F1C2C] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
+          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
             <span className="text-xs">null. (null)</span>
@@ -55,12 +55,12 @@ const Home: React.FC = () => {
 
         {/* Third Row */}
         <div className="flex flex-col xl:flex-row justify-between w-full gap-4">
-          <div className="bg-[#928DAB] text-[#1F1C2C] w-full xl:w-[680px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
+          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[680px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
             <span className="text-xs">null. (null)</span>
           </div>
-          <div className="bg-[#928DAB] text-[#1F1C2C] w-full xl:w-[680px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
+          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[680px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
             <span className="text-xs">null. (null)</span>
@@ -69,7 +69,7 @@ const Home: React.FC = () => {
 
         {/* Button */}
         <div className="w-full flex justify-center mt-4">
-          <button className="text-[#9f9fb7] border border-[#9f9fb7]/30 rounded-md px-3 sm:px-6 md:px-8 py-2 md:py-3 text-sm md:text-md hover:bg-[#9f9fb7]/10 transition-colors"
+          <button className="text-[#252525] border border-[#252525] rounded-md px-3 sm:px-6 md:px-8 py-2 md:py-3 text-sm md:text-md hover:bg-[#fff8c1]/50 transition-colors"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
             Collected Works ++

@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
         onMouseLeave={() => setCursorVariant("default")}
       >
         <span className="md:inline hidden">The City of Stars, PHL</span>
-        <span className="md:hidden margin">TCOF, PHL</span>
+        <span className="md:hidden margin inline">TCOS, PHL</span>
       </a>
     </div>
   )

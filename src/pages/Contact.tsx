@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
   return (
     <div className="flex-grow flex items-center justify-center">
       <div className="flex flex-col max-w-[450px] w-full mx-auto p-6">
-        <div className="flex flex-row w-full justify-between items-center text-[50px] font-bold mb-8 gap-10">
+        <div className="flex flex-row w-full justify-between items-center text-[44px] md:text-[50px] font-bold mb-8 gap-10">
           <div
             className="tracking-tight"
             onMouseEnter={() => setCursorVariant('text')}
