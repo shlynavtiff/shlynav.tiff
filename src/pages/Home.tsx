@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-6 sm:bottom-10 left-4 sm:left-8 md:bottom-20 md:left-16 text-xs sm:text-sm font-semibold">
+      <div className="absolute bottom-6 sm:bottom-10 left-4 sm:left-8 md:bottom-20 md:left-16 text-sm sm:text-sm font-semibold">
         <p>scroll down</p>
         <p>more</p>
       </div>
@@ -27,15 +27,22 @@ const Home: React.FC = () => {
 
         {/* First Row */}
         <div className="flex flex-col xl:flex-row justify-between w-full gap-4">
-          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
+          <a href="https://verbaaaaaa.vercel.app/" target='_blank'>
+          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4 relative overflow-hidden"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
-            <span className="text-xs">null. (null)</span>
+              <img
+              src="/verba.png" // Replace with your image path
+              alt="Description of the image"
+              className="absolute inset-0 w-full h-full object-cover object-center opacity-20 hover:opacity-90 transition-opacity duration-700 scale-90 md:scale-100" // Adjust opacity as needed
+            />
+            <span className="text-sm ">verba. (2024)</span>
           </div>
+          </a>
           <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[930px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
-            <span className="text-xs">null. (null)</span>
+            <span className="text-sm">null. (null)</span>
           </div>
         </div>
 
@@ -44,12 +51,12 @@ const Home: React.FC = () => {
           <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[930px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
-            <span className="text-xs">null. (null)</span>
+            <span className="text-sm">null. (null)</span>
           </div>
           <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
-            <span className="text-xs">null. (null)</span>
+            <span className="text-sm">null. (null)</span>
           </div>
         </div>
 
@@ -58,12 +65,12 @@ const Home: React.FC = () => {
           <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[680px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
-            <span className="text-xs">null. (null)</span>
+            <span className="text-sm">null. (null)</span>
           </div>
           <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[680px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
-            <span className="text-xs">null. (null)</span>
+            <span className="text-sm">null. (null)</span>
           </div>
         </div>
 
