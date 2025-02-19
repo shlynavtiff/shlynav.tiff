@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         onMouseLeave={() => setCursorVariant('default')}
       >
         shlynav.tiff
-        <span className='text-[11px] md:text-xs tracking-normal font-normal ml-1'>v1.2.1</span>
+        <span className='text-[11px] md:text-xs tracking-normal font-normal ml-1'>v1.2.2</span>
       </div>
 
       {/* Right Side: City Name */}

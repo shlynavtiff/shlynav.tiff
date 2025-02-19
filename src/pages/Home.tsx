@@ -3,7 +3,7 @@ import { useCursor } from '../CursorContext';
 import Transition from '../Transition';
 
 const Home: React.FC = () => {
-     const { setCursorVariant } = useCursor();
+  const { setCursorVariant } = useCursor();
   return (
     <div className="flex flex-col justify-center mx-auto">
 
@@ -27,18 +27,38 @@ const Home: React.FC = () => {
 
         {/* First Row */}
         <div className="flex flex-col xl:flex-row justify-between w-full gap-4">
-          <a href="https://verbaaaaaa.vercel.app/" target='_blank'>
-          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4 relative overflow-hidden"
+
+          <div
+            className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex flex-col justify-end p-4 relative overflow-hidden group"
             onMouseEnter={() => setCursorVariant('text')}
-            onMouseLeave={() => setCursorVariant('default')}>
-              <img
+            onMouseLeave={() => setCursorVariant('default')}
+          >
+            {/* Background Image */}
+            <img
               src="/verba.png" // Replace with your image path
-              alt="Description of the image"
-              className="absolute inset-0 w-full h-full object-cover object-center opacity-20 hover:opacity-90 transition-opacity duration-700 scale-90 md:scale-100" // Adjust opacity as needed
+              alt="Project Image"
+              className="absolute inset-0 w-full h-full object-cover object-center opacity-40 transition-opacity duration-700 group-hover:opacity-100 scale-90 md:scale-100"
             />
-            <span className="text-sm ">verba. (2024)</span>
+
+            {/* Bottom Section: Text + Button */}
+            <div className="flex flex-row text-sm justify-between w-full items-center relative z-10">
+              <span>verba. (2024)</span>
+
+              <a
+                href="https://verbaaaaaa.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setCursorVariant('text')}
+                onMouseLeave={() => setCursorVariant('default')}
+              >
+                <button className="border border-[#D8A7B1] px-4 py-2 text-sm rounded-md hover:bg-[#fff8c1] hover:text-[#252525] transition duration-300">
+                  visit work
+                </button>
+              </a>
+            </div>
           </div>
-          </a>
+
+
           <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[930px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
             onMouseEnter={() => setCursorVariant('text')}
             onMouseLeave={() => setCursorVariant('default')}>
