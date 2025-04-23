@@ -8,26 +8,26 @@ const Footer: React.FC = () => {
 
   return (
     <div className='flex justify-between items-end flex-row py-8 px-10'>
-      {/* Left Side: Logo + Version */}
-      <div 
-        className='text-5xl font-bold tracking-extra-tighter flex flex-row items-baseline'
+      <div
+        className='flex items-end text-[40px] font-extrabold tracking-extra-tighter'
         onMouseEnter={() => setCursorVariant('text')}
         onMouseLeave={() => setCursorVariant('default')}
       >
-        shlynav.tiff
-        <span className='text-[11px] md:text-xs tracking-normal font-normal ml-1'>v1.2.4</span>
+        <span className='leading-none'>shlynav.tiff</span>
+        <span className='text-[11px] md:text-xs tracking-normal font-normal ml-1 self-end mb-1'>
+          v1.2.4
+        </span>
       </div>
 
-      {/* Right Side: City Name */}
       <a
         href="https://en.wikipedia.org/wiki/Quezon_City#:~:text=Quezon%20City%20is%20known%20for,the%20%22City%20of%20Stars%22."
         target="_blank"
-        className="text-[11px] md:text-xs flex items-baseline"
+        className="text-[11px] md:text-xs flex items-end"
         onMouseEnter={() => setCursorVariant("text")}
         onMouseLeave={() => setCursorVariant("default")}
       >
         <span className="md:inline hidden">The City of Stars, PHL</span>
-        <span className="md:hidden margin inline">TCOS, PHL</span>
+        <span className="md:hidden inline">TCOS, PHL</span>
       </a>
     </div>
   )

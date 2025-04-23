@@ -26,20 +26,19 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <Router> {/* ✅ Move Router to wrap everything */}
+    <Router>
       <CursorProvider>
         <Cursor />
-        
+
         <div className="min-h-screen flex flex-col ">
-        <NavBar />
-          {/* Main content takes available space */}
+          <NavBar />
           <div className="flex-grow items-center justify-center flex">
-            <AnimatedRoutes /> {/* Routes component now inside Router */}
+            <AnimatedRoutes />
           </div>
-          <Footer /> {/* Footer always sits at the bottom */}
-          <Analytics/>
+          <Footer />
+          <Analytics />
         </div>
-        
+
       </CursorProvider>
     </Router>
   );
