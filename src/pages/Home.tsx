@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { useCursor } from '../CursorContext';
 import Transition from '../Transition';
+import HoverCard from '../components/HoverCard';
 
 const Home: React.FC = () => {
   const { setCursorVariant } = useCursor();
@@ -63,43 +64,19 @@ const Home: React.FC = () => {
 
         <div className="flex flex-col xl:flex-row justify-between w-full gap-4">
 
-          <div
-            className={`bg-[#252525] text-[#D8A7B1] w-full xl:w-[430px] md:w-auto min-h-[580px] rounded-lg flex flex-col justify-end p-4 relative overflow-hidden ${isHovered ? "touch-hover" : "group"}`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-          >
-            <img
-              src="/verba.png"
-              alt="Project Image"
-              className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-250 scale-85 md:scale-100 ${isHovered ? "opacity-100" : "opacity-20"}`}
-            />
+          <HoverCard
+            imageSrc="/verba.png"
+            title="verba. (2024)"
+            link="https://verbaaaaaa.vercel.app/"
+            className="w-full xl:w-[430px] md:w-auto min-h-[580px]"
+          />
 
-            <div className="flex flex-row text-sm justify-between w-full items-center relative z-10">
-              <span>verba. (2024)</span>
-
-              <a
-                href="https://verbaaaaaa.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-20"
-                onMouseEnter={() => setCursorVariant('text')}
-                onMouseLeave={() => setCursorVariant('default')}
-              >
-                <button className="border border-[#D8A7B1] px-4 py-2 text-sm rounded-md transition duration-300 hover:bg-[#fff8c1] hover:text-[#252525] focus:bg-[#fff8c1] focus:text-[#252525]">
-                  visit work.
-                </button>
-              </a>
-            </div>
-          </div>
-
-
-          <div className="bg-[#252525] text-[#D8A7B1] w-full xl:w-[930px] md:w-auto min-h-[580px] rounded-lg flex items-end p-4"
-            onMouseEnter={() => setCursorVariant('text')}
-            onMouseLeave={() => setCursorVariant('default')}>
-            <span className="text-sm">null. (null)</span>
-          </div>
+          <HoverCard
+            imageSrc="/1211.png"
+            title="1211. (2025)"
+            link="https://www.1211.space/"
+            className="w-full xl:w-[930px] md:w-auto min-h-[580px]"
+          />
         </div>
 
         <div className="flex flex-col xl:flex-row justify-between w-full gap-4">
@@ -145,7 +122,7 @@ const Home: React.FC = () => {
           <h2>
             Be willing to fail as genuinely as you desire to succeed. The flames of passion don’t consume but purify.
             The reward for pursuing passion isn’t what you’re able to take away, but what you’re able to leave behind.
-            Show some passion.
+            Show some <strong>passion</strong>.
           </h2>
         </div>
       </section>
