@@ -17,6 +17,9 @@ const Home: React.FC = () => {
   const handleMouseEnter = () => {
     if (!isTouchDevice) {
       setIsHovered(true);
+      if (isHovered) {
+        console.log("sdasdad");
+      }
       setCursorVariant("text");
     }
   };
