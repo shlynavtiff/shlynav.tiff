@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useCursor } from "../CursorContext";
 
 interface HoverCardProps {
-    imageSrc: string;
+    imageSrcSmall: string;
+    imageSrcMedium?: string;
+    imageSrcLarge?: string;
     title: string;
     link: string;
     className?: string;
 }
 
-const HoverCard: React.FC<HoverCardProps> = ({ imageSrc, title, link, className }) => {
+const HoverCard: React.FC<HoverCardProps> = ({ imageSrcSmall, imageSrcMedium, imageSrcLarge, title, link, className }) => {
     const { setCursorVariant } = useCursor();
     const [isHovered, setIsHovered] = useState(false);
     const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -53,11 +55,15 @@ const HoverCard: React.FC<HoverCardProps> = ({ imageSrc, title, link, className 
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
         >
-            <img
-                src={imageSrc}
-                alt="Project Image"
-                className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-250 scale-85 md:scale-100 ${isHovered ? "opacity-100" : "opacity-20"}`}
-            />
+            <picture>
+                {imageSrcLarge && <source media="(min-width: 1024px)" srcSet={imageSrcLarge} />}
+                {imageSrcMedium && <source media="(min-width: 640px)" srcSet={imageSrcMedium} />}
+                <img
+                    src={imageSrcSmall}
+                    alt="Project Image"
+                    className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-250 scale-85 md:scale-100 ${isHovered ? "opacity-100" : "opacity-20"}`}
+                />
+            </picture>
 
             <div className="flex flex-row text-sm justify-between w-full items-center relative z-10">
                 <span>{title}</span>

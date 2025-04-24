@@ -45,8 +45,8 @@ body {
 }
 
 ::selection {
-  background-color: #fff8c1; /* Change this to your desired color */
-  color: #000; /* Text color when selected */
+  background-color: #fff8c1; 
+  color: #000; 
 }
 
 a:hover{
@@ -58,24 +58,23 @@ button:hover{
 }
 
 
-/* Default scrollbar size to prevent layout shift */
+
 ::-webkit-scrollbar {
   width: 0px;
   border-radius: 8px;
-  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  transition: opacity 0.5s ease-in-out;
 }
 
-/* Hide scrollbar thumb when idle */
 ::-webkit-scrollbar-thumb {
   background: transparent;
   border-radius: 8px;
   transition: background 0.5s ease-in-out;
 }
 
-/* Show scrollbar when scrolling */
+
 .scrolling ::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background: #928DAB; /* Scrollbar color */
+  background: #928DAB; 
 }
 
 .margin{

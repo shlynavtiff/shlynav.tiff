@@ -9,9 +9,10 @@ import NavBar from './components/Navbar'
 import Footer from './components/Footer'
 import { AnimatePresence } from 'framer-motion'
 import { Analytics } from "@vercel/analytics/react"
+import SmoothScrollWrapper from './components/SmoothScrollWrapper'
 
 function AnimatedRoutes() {
-  const location = useLocation(); // ✅ Now inside Router context
+  const location = useLocation()
 
   return (
     <AnimatePresence mode='wait'>
@@ -21,7 +22,7 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About />} />
       </Routes>
     </AnimatePresence>
-  );
+  )
 }
 
 function App() {
@@ -29,19 +30,19 @@ function App() {
     <Router>
       <CursorProvider>
         <Cursor />
-
-        <div className="min-h-screen flex flex-col ">
-          <NavBar />
-          <div className="flex-grow items-center justify-center flex">
-            <AnimatedRoutes />
+        <SmoothScrollWrapper>
+          <div className="min-h-screen flex flex-col">
+            <NavBar />
+            <div className="flex-grow items-center justify-center flex">
+              <AnimatedRoutes />
+            </div>
+            <Footer />
+            <Analytics />
           </div>
-          <Footer />
-          <Analytics />
-        </div>
-
+        </SmoothScrollWrapper>
       </CursorProvider>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

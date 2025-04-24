@@ -1,53 +1,64 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useCursor } from '../CursorContext';
 import Transition from '../Transition';
 import HoverCard from '../components/HoverCard';
 
 const Home: React.FC = () => {
   const { setCursorVariant } = useCursor();
-
-  const [isHovered, setIsHovered] = useState(false)
-  const [isTouchDevice, setIsTouchDevice] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
-    setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0)
-  }, [])
-
-  const handleTouchStart = () => {
-    if (isTouchDevice) {
-      setIsHovered(true)
-      setCursorVariant("text")
-    }
-  }
-
-  const handleTouchEnd = () => {
-    if (isTouchDevice) {
-      setIsHovered(false)
-      setCursorVariant("default")
-    }
-  }
+    setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
 
   const handleMouseEnter = () => {
     if (!isTouchDevice) {
-      setIsHovered(true)
-      setCursorVariant("text")
+      setIsHovered(true);
+      setCursorVariant("text");
     }
-  }
+  };
 
   const handleMouseLeave = () => {
     if (!isTouchDevice) {
-      setIsHovered(false)
-      setCursorVariant("default")
+      setIsHovered(false);
+      setCursorVariant("default");
     }
-  }
+  };
+
+  const handleTouchStart = () => {
+    if (isTouchDevice) {
+      setIsHovered(true);
+      setCursorVariant("text");
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isTouchDevice) {
+      setIsHovered(false);
+      setCursorVariant("default");
+    }
+  };
 
   return (
     <div className="flex flex-col justify-center mx-auto">
 
-      <div className="tracking-extraTighter text-[60px] sm:text-[70px] md:text-[80px] font-extrabold flex flex-row items-center justify-center min-h-screen px-4 sm:px-6 tracking-extra-tighter">
-        shlynav.tiff
+      <div
+      >
+        <div className="tracking-extraTighter text-[60px] sm:text-[70px] md:text-[80px] font-extrabold flex flex-row items-center justify-center min-h-screen px-4 sm:px-6 tracking-extra-tighter"
+        >
+          <a href="https://www.instagram.com/shlynav.tiff/"
+            target='_blank'
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            className='duration-300'>shlynav.tiff</a>
+
+        </div>
+
       </div>
 
       <div className="absolute bottom-6 sm:bottom-10 left-4 sm:left-8 md:bottom-20 md:left-16 text-sm sm:text-sm font-semibold">
@@ -65,17 +76,19 @@ const Home: React.FC = () => {
         <div className="flex flex-col xl:flex-row justify-between w-full gap-4">
 
           <HoverCard
-            imageSrc="/verba.png"
+            imageSrcLarge='/verbalg.png'
+            imageSrcMedium='/verbamd.png'
+            imageSrcSmall="/verbasm.png"
             title="verba. (2024)"
             link="https://verbaaaaaa.vercel.app/"
-            className="w-full xl:w-[430px] md:w-auto min-h-[580px]"
+            className="w-full xl:w-[430px] md:w-auto md:h-[580px] min-h-[700px]"
           />
 
           <HoverCard
-            imageSrc="/1211.png"
+            imageSrcSmall="/1211.png"
             title="1211. (2025)"
             link="https://www.1211.space/"
-            className="w-full xl:w-[930px] md:w-auto min-h-[580px]"
+            className="w-full xl:w-[930px] md:w-auto md:h-[580px] min-h-[700px]"
           />
         </div>
 
