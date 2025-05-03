@@ -5,42 +5,23 @@ import { useCursor } from '../CursorContext';
 import Transition from '../Transition';
 import HoverCard from '../components/HoverCard';
 
+
 const Home: React.FC = () => {
   const { setCursorVariant } = useCursor();
-  const [isHovered, setIsHovered] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
     setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
   }, []);
 
-  const handleMouseEnter = () => {
-    if (!isTouchDevice) {
-      setIsHovered(true);
-      if (isHovered) {
-        console.log("sdasdad");
-      }
-      setCursorVariant("text");
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (!isTouchDevice) {
-      setIsHovered(false);
-      setCursorVariant("default");
-    }
-  };
-
   const handleTouchStart = () => {
     if (isTouchDevice) {
-      setIsHovered(true);
       setCursorVariant("text");
     }
   };
 
   const handleTouchEnd = () => {
     if (isTouchDevice) {
-      setIsHovered(false);
       setCursorVariant("default");
     }
   };
@@ -48,10 +29,8 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center overflow-x-hidden">
 
-      <div
-      >
-        <div className="tracking-extraTighter text-[65px] sm:text-[70px] md:text-[80px] font-extrabold flex flex-row items-center justify-center min-h-screen px-4 sm:px-6 tracking-extra-tighter"
-        >
+      <div>
+        <div className="tracking-extraTighter text-[65px] sm:text-[70px] md:text-[80px] font-extrabold flex flex-row items-center justify-center min-h-screen px-4 sm:px-6 tracking-extra-tighter">
           <a href="https://www.instagram.com/shlynav.tiff/"
             target='_blank'
             onMouseEnter={() => setCursorVariant("text")}
@@ -59,13 +38,11 @@ const Home: React.FC = () => {
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             className='duration-300'>shlynav.tiff</a>
-
         </div>
-
       </div>
 
       <div className="absolute bottom-6 sm:bottom-10 left-4 sm:left-8 md:bottom-20 md:left-16 text-sm sm:text-sm font-semibold">
-        <p>where did it go wrong?</p>
+        <p className='text-[#151515]'>where did it go wrong?</p>
       </div>
 
       <section className="flex flex-col w-full h-screen relative overflow-hidden">
@@ -127,8 +104,6 @@ const Home: React.FC = () => {
           </button>
         </div>
       </section>
-
-
 
       <section className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-6">
         <div className="max-w-[1070px] text-4xl md:text-[54px] tracking-tighter font-extrabold leading-[.75] md:leading-[.8] text-center">
