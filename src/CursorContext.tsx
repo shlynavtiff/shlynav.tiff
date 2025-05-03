@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 interface CursorContextProps {
-  cursorVariant: 'default' | 'linkHover' | 'text'; // ✅ Added 'text'
+  cursorVariant: 'default' | 'linkHover' | 'text';
   setCursorVariant: (variant: 'default' | 'linkHover' | 'text') => void;
 }
 

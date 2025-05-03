@@ -8,22 +8,41 @@
   --leading-tight-phone: 0.2;
 }
 
+@keyframes noiseAnimation {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+.moving-noise::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: noiseAnimation 1s steps(10) infinite;
+  opacity: 0.07;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
 :root {
-  --background: #D8A7B1;
+  --background: #E37383;
   --foreground: #333333;
   --cursor-default: #333333;
-  --cursor-hover: #D8A7B1;
+  --cursor-hover: #E37383;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #D8A7B1     ;
+    --background: #E37383   ;
     --foreground: #252525    ;
   }
 }
 
 *{
-  cursor: none;
+  /* cursor: none; */
   box-sizing: border-box;
 }
 
@@ -39,9 +58,11 @@ html{
 body {
   color: var(--foreground);
   background: var(--background);
+  transition: background-color 0.3s, color 0.3s;
   font-family: "Outfit", Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   overflow: none;
+  overflow-x: hidden;
 }
 
 ::selection {

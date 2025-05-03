@@ -11,6 +11,7 @@ import { AnimatePresence } from 'framer-motion'
 import { Analytics } from "@vercel/analytics/react"
 import SmoothScrollWrapper from './components/SmoothScrollWrapper'
 
+
 function AnimatedRoutes() {
   const location = useLocation()
 
@@ -33,7 +34,7 @@ function App() {
         <SmoothScrollWrapper>
           <div className="min-h-screen flex flex-col">
             <NavBar />
-            <div className="flex-grow items-center justify-center flex">
+            <div className="flex-grow items-center justify-center flex ">
               <AnimatedRoutes />
             </div>
             <Footer />

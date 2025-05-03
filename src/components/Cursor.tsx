@@ -36,7 +36,7 @@ const Cursor: React.FC = () => {
       mixBlendMode: 'difference' as const,
       borderRadius: '50%',
     },
-    linkHover: { // ✅ Added missing variant
+    linkHover: { 
       x: mousePosition.x - 15,
       y: mousePosition.y - 15,
       height: 30,

@@ -17,9 +17,9 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-[1080px] w-full leading-extra-tight font-bold text-[20px] sm:text-[30px] md:text-[35px] px-4 ">
+      <div className="max-w-[1080px] w-full leading-[.85] font-bold text-[20px] sm:text-[30px] md:text-[35px] px-4 ">
         shlynav.tiff <span onMouseEnter={() => setCursorVariant('text')}
-          onMouseLeave={() => setCursorVariant('default')}> <a target="_blank" href="https://en.wikipedia.org/wiki/Baybayin#:~:text=Baybayin%20(%20%E1%9C%8A%E1%9C%8C%E1%9C%94%E1%9C%8A%E1%9C%8C%E1%9C%92%E1%9C%88%E1%9C%94%2CTagalog%20pronunciation%3A,and%20to%20a%20lesser%20extent">[ ᜐ᜔ᜑ᜔ᜎ᜔ᜌ᜔ᜈᜊ᜔ᜆᜒᜉ᜔ᜉ᜔ ]</a></span>  is a passionate developer with a strong focus on building engaging,
+          onMouseLeave={() => setCursorVariant('default')}> <a target="_blank" className='underline' href="https://en.wikipedia.org/wiki/Baybayin#:~:text=Baybayin%20(%20%E1%9C%8A%E1%9C%8C%E1%9C%94%E1%9C%8A%E1%9C%8C%E1%9C%92%E1%9C%88%E1%9C%94%2CTagalog%20pronunciation%3A,and%20to%20a%20lesser%20extent">[ ᜐ᜔ᜑ᜔ᜎ᜔ᜌ᜔ᜈᜊ᜔ᜆᜒᜉ᜔ᜉ᜔ ]</a></span>  is a passionate developer with a strong focus on building engaging,
         user-friendly digital experiences. Driven by a love for problem-solving and design. Beyond development, he enjoys working
         on side projects, learning new <a href="https://www.techtarget.com/whatis/definition/framework" target="_blank" onMouseEnter={() => setCursorVariant('text')}
           onMouseLeave={() => setCursorVariant('default')} className='underline'>technologies</a>. He is
