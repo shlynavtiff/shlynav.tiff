@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
       >
         <span className='leading-none'>shlynav.tiff</span>
         <span className='text-[11px] md:text-xs tracking-normal font-normal ml-1 self-end mb-1'>
-          v1.2.8
+          v1.3.0
         </span>
       </div>
 

@@ -46,14 +46,14 @@ const Home: React.FC = () => {
       </div>
 
       <section className="flex flex-col w-full h-screen relative overflow-hidden">
-        <div className="flex flex-col absolute top-60 left-5 sm:left-20 md:left-40 font-extrabold text-6xl leading-[.80]">
+        <div className="flex flex-col absolute top-30 left-5 sm:left-20 md:left-40 font-extrabold text-6xl leading-[.80]">
           <p>useful.</p>
           <p>functional.</p>
           <p>harmonious.</p>
           <p>seamless.</p>
         </div>
 
-        <div className="absolute top-[450px] right-0 sm:right-20 md:right-40 w-full sm:w-[450px] px-4 sm:px-0 leading-[1]">
+        <div className="absolute top-85 right-0 sm:right-20 md:right-40 w-full sm:w-[450px] px-4 sm:px-0 leading-[1]">
           <p className=''>
             As a software developer, I strongly value integrity, collaboration, and continuous learning. I believe in writing clean,
             maintainable code that prioritizes long-term quality over short-term gains. Working effectively with teammates across
@@ -75,11 +75,11 @@ const Home: React.FC = () => {
 
         <div className="flex flex-col items-center  w-full p-1 gap-1">
           <HoverCard
-            imageSrcSmall="/verbalg.png"
+            imageSrcSmall="/verbalod.png"
             title='verba.'
             year='2024'
-            link='https://1211.space/'
-            desc='A minimal, fun photobooth web app that lets users capture photos, apply custom layouts, and decorate with drag-and-drop stickers.'
+            link='https://verbaaaaaa.vercel.app/'
+            desc='A minimal, simple, fast, and responsive dictionary web app for looking up word definitions, exploring meanings, and enhancing your vocabulary with ease.'
             className="lg:w-[1200px] min-h-[420px] "
           />
 

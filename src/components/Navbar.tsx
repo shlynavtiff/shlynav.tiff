@@ -9,7 +9,7 @@ export default function NavBar() {
   const { setCursorVariant } = useCursor();
 
   return (
-    <nav className="absolute top-20 z-20">
+    <nav className="absolute top-10 z-20">
       <div className="container mx-auto px-4 py-4 flex justify-center">
         <ul className="flex space-x-8 font-bold text-sm flex-col gap-1">
           <li>

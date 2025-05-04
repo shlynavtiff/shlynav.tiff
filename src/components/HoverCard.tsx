@@ -60,7 +60,7 @@ const HoverCard: React.FC<HoverCardProps> = ({ imageSrcSmall, imageSrcMedium, im
 
             <div className="w-full md:w-3/4 flex flex-col justify-between items-start gap-4 p-2 md:p-4 relative z-10 border-[#]">
                 <div className="flex flex-col items-start text-start">
-                    <span className="text-lg md:text-2xl font-bold">{title}</span>
+                    <span className="text-xl md:text-2xl font-bold">{title}</span>
                     <span className="text-xs md:text-sm">{year}</span>
                 </div>
 
@@ -72,11 +72,11 @@ const HoverCard: React.FC<HoverCardProps> = ({ imageSrcSmall, imageSrcMedium, im
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative z-20"
+                    className="w-full sm:w-[100px] relative z-20 "
                     onMouseEnter={() => setCursorVariant("text")}
                     onMouseLeave={() => setCursorVariant("default")}
                 >
-                    <button className="border border-[#E37383] px-4 py-2 text-sm rounded-md transition hover:bg-[#fff8c1] hover:text-[#252525] focus:bg-[#fff8c1] focus:text-[#252525] duration-300">
+                    <button className="min-w-full sm:w-[100px] border border-[#E37383] px-4 py-2 text-sm rounded-md transition hover:bg-[#fff8c1] hover:text-[#252525] focus:bg-[#fff8c1] focus:text-[#252525] duration-300">
                         visit work.
                     </button>
                 </a>

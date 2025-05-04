@@ -58,7 +58,6 @@ html{
 body {
   color: var(--foreground);
   background: var(--background);
-  transition: background-color 0.3s, color 0.3s;
   font-family: "Outfit", Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   overflow: none;
@@ -121,3 +120,4 @@ button:hover{
   background: #252525;
   transform-origin: top;
 }
+
